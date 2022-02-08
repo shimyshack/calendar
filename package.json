@@ -1,8 +1,10 @@
 {
   "name": "@shimyshack/calendar",
-  "version": "0.0.0",
-  "license" : "MIT",
-  "files": ["dist"],
+  "version": "0.0.1",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/s-calendar.umd.js",
   "module": "./dist/s-calendar.mjs",
   "exports": {
