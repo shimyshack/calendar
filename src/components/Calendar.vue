@@ -251,7 +251,7 @@ export default {
 
 <script lang="ts" setup>
 import { isWithinInterval, isBefore, isAfter, isDate, min, max, isSameMonth, isSameDay, getDaysInMonth, startOfMonth, getDay, getHours, setDate, setHours, setMinutes, setSeconds, setMilliseconds, subMonths, addMonths, format } from 'date-fns'
-import { ref, computed, watch, PropType, onMounted, nextTick } from 'vue'
+import { ref, computed, watch, PropType, onMounted, nextTick } from 'vue-demi'
 import { useResizeObserver, breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 
 const props = defineProps({

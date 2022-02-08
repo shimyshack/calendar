@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Calendar from './components/Calendar.vue'
 // import { Calendar } from '../dist/s-calendar.mjs'
-import { ref } from 'vue'
+import { ref } from 'vue-demi'
 const date = ref({ start: null, end: null })
 // const date = ref(null)
 const min = ref(new Date('07-15-2021'))
