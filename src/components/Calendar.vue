@@ -104,14 +104,33 @@
       </template>
       <template v-else>
         <div class="grid gap-1" :class="{ 'w-56': isMobile || !isRange, 'w-120': !isMobile && isRange }">
+          <div>
+            <div class="text-sm uppercase font-semibold text-gray-500">Month</div>
+            <select
+              v-model="calendarMonthSelect"
+              class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+            >
+              <option v-for="month of calendarMonths">{{ month }}</option>
+            </select>
+          </div>
+          <div class="mt-1">
+            <div class="text-sm uppercase font-semibold text-gray-500">Year</div>
+            <select
+              v-model="calendarYearSelect"
+              class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+            >
+              <option v-for="year of calendarYears">{{ year }}</option>
+            </select>
+          </div>
+          <button
+            class="mt-2 font-semibold border rounded px-2 py-1 hover:shadow text-sm hover:bg-blue-600 rounded text-white bg-blue-500"
+            @click="goToSelectedMonth()"
+          >Go To Date</button>
+          <hr class="my-2" />
           <button
             class="font-semibold border rounded px-2 py-1 hover:shadow text-sm hover:bg-gray-100 rounded text-blue-500"
-            @click="goToThisMonth(); view = 'days'"
+            @click="goToThisMonth()"
           >Go To Today</button>
-          <button
-            class="font-semibold border rounded px-2 py-1 hover:shadow text-sm hover:bg-gray-100 rounded text-blue-500"
-            @click="view = 'days'"
-          >Cancel</button>
         </div>
       </template>
     </div>
@@ -250,7 +269,7 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { isWithinInterval, isBefore, isAfter, isDate, min, max, isSameMonth, isSameDay, getDaysInMonth, startOfMonth, getDay, getHours, setDate, setHours, setMinutes, setSeconds, setMilliseconds, subMonths, addMonths, format } from 'date-fns'
+import { isWithinInterval, isBefore, isAfter, isDate, min, max, isSameMonth, isSameDay, getDaysInMonth, startOfMonth, getDay, getHours, setDate, setHours, setMinutes, setSeconds, setMilliseconds, subMonths, addMonths, format, getMonth, getYear } from 'date-fns'
 import { ref, computed, watch, PropType, onMounted, nextTick } from 'vue-demi'
 import { useResizeObserver, breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 
@@ -294,21 +313,35 @@ watch(() => props.mode, (value) => {
   }
 }, { immediate: true })
 
-const view = ref('days')
-
 const displayedMonth = ref(new Date())
 const calendarDaysOfWeek = ["S", "M", "T", "W", "T", "F", "S"]
+const calendarMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+const calendarYears = [...Array(200).keys()].map((i) => i + 1900)
 const calendarMonthTitle = computed(() => format(displayedMonth.value, 'MMM'))
 const calendarYearTitle = computed(() => format(displayedMonth.value, 'yyyy'))
 const calendarStartOfMonth = computed(() => getDay(startOfMonth(displayedMonth.value)) + 1)
 const calendarDaysInMonth = computed(() => getDaysInMonth(displayedMonth.value))
-const isThisMonth = computed(() => isSameMonth(displayedMonth.value, new Date()))
 
 const displayedNextMonth = ref(addMonths(displayedMonth.value, 1))
 const calendarNextMonthTitle = computed(() => format(displayedNextMonth.value, 'MMM'))
 const calendarNextYearTitle = computed(() => format(displayedNextMonth.value, 'yyyy'))
 const calendarNextStartOfMonth = computed(() => getDay(startOfMonth(displayedNextMonth.value)) + 1)
 const calendarNextDaysInMonth = computed(() => getDaysInMonth(displayedNextMonth.value))
+
+const view = ref('days')
+const calendarMonthSelect = ref<string | null>(null)
+const calendarYearSelect = ref<string | null>(null)
+
+const setCalendarSelectMonthAndYear = () => {
+  calendarMonthSelect.value = format(displayedMonth.value, 'MMMM')
+  calendarYearSelect.value = format(displayedMonth.value, 'yyyy')
+}
+
+setCalendarSelectMonthAndYear()
+
+watch(() => view.value, () => {
+  setCalendarSelectMonthAndYear()
+})
 
 const showCalendars = computed(() => {
   return props.mode === 'date' || props.mode === 'dateTime'
@@ -465,9 +498,20 @@ const goToNextMonth = () => {
   displayedMonth.value = addMonths(displayedMonth.value, 1)
   displayedNextMonth.value = addMonths(displayedNextMonth.value, 1)
 }
+const goToSelectedMonth = () => {
+  if (!calendarMonthSelect.value || !calendarYearSelect.value) return
+  const monthIndex = calendarMonths.findIndex((i) => i === calendarMonthSelect.value) + 1
+  console.log(parseInt(calendarYearSelect.value), monthIndex)
+  if (typeof monthIndex === 'number') {
+    displayedMonth.value = new Date(parseInt(calendarYearSelect.value), monthIndex, 0, 0, 0, 0, 0)
+    displayedNextMonth.value = addMonths(displayedMonth.value, 1)
+    view.value = 'days'
+  }
+}
 const goToThisMonth = () => {
   displayedMonth.value = new Date()
   displayedNextMonth.value = addMonths(displayedMonth.value, 1)
+  view.value = 'days'
 }
 const canGoToPrevMonth = computed(() => {
   if (!(props.min instanceof Date)) return true
