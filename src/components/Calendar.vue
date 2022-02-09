@@ -143,7 +143,7 @@
     <!-- Time pickers -->
     <div
       v-if="showTime && view === 'days'"
-      :class="{ 'flex gap-8 w-120': !isMobile && showCalendars }"
+      :class="{ 'flex gap-8 w-120': !isMobile && showCalendars && isRange }"
     >
       <div :class="{ 'w-56 border-t my-2 pt-2 border-t': showCalendars }">
         <div class="uppercase text-sm text-gray-500 mb-2" :class="{ 'opacity-50': !dateSelectionIsComplete}">
