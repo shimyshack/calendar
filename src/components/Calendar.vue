@@ -7,6 +7,7 @@
       >
         <div class="flex-grow flex">
           <button
+            type="button"
             class="my-auto text-lg font-semibold flex gap-1 text-gray-900 hover:text-gray-500"
             @click="view === 'days' ? view = 'years' : view = 'days'"
           >
@@ -18,11 +19,11 @@
           </button>
         </div>
         <template v-if="view === 'days'">
-          <button class="text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50" :disabled="!canGoToPrevMonth" @click="goToPrevMonth">
+          <button type="button" class="text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50" :disabled="!canGoToPrevMonth" @click="goToPrevMonth">
             <span class="sr-only">Go to previous month</span>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5 h-5" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"></path></svg>
           </button>
-          <button class="text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50" :disabled="!canGoToNextMonth" @click="goToNextMonth">
+          <button type="button" class="text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50" :disabled="!canGoToNextMonth" @click="goToNextMonth">
             <span class="sr-only">Go to next month</span>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5 h-5" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144l-144 144"></path></svg>
           </button>
@@ -51,6 +52,7 @@
               ]"
             >
               <button
+                type="button"
                 class="disabled:pointer-events-none disabled:opacity-25"
                 :class="{
                   'px-2 py-1 w-8 h-8 rounded-full text-sm': true,
@@ -85,6 +87,7 @@
                 ]"
               >
                 <button
+                  type="button"
                   class="disabled:pointer-events-none disabled:opacity-25"
                   :class="{
                     'px-2 py-1 w-8 h-8 rounded-full text-sm': true,
@@ -123,11 +126,13 @@
             </select>
           </div>
           <button
+            type="button"
             class="mt-2 font-semibold border rounded px-2 py-1 hover:shadow text-sm hover:bg-blue-600 rounded text-white bg-blue-500"
             @click="goToSelectedMonth()"
           >Go To Date</button>
           <hr class="my-2" />
           <button
+            type="button"
             class="font-semibold border rounded px-2 py-1 hover:shadow text-sm hover:bg-gray-100 rounded text-blue-500"
             @click="goToThisMonth()"
           >Go To Today</button>
