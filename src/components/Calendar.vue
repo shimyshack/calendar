@@ -39,7 +39,7 @@
               class="text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1"
               v-for="day of calendarDaysOfWeek"
               :key="day"
-            >{{ day }}</div>
+            >{{ day.charAt(0) }}</div>
             <div
               v-for="day of calendarDaysInMonth"
               :key="day"
@@ -74,7 +74,7 @@
                 class="text-sm font-bold text-gray-400 text-center uppercase mb-1"
                 v-for="day of calendarDaysOfWeek"
                 :key="day"
-              >{{ day }}</div>
+              >{{ day.charAt(0) }}</div>
               <div
                 v-for="day of calendarNextDaysInMonth"
                 :key="day"
@@ -303,25 +303,10 @@ const date = computed<CalendarDate | CalendarRange>({
   }
 })
 
-watch(() => props.mode, (value) => {
-  if (value === 'time') {
-    const isRange = props.modelValue && !isDate(props.modelValue)
-    const now = setHours(setMinutes(setSeconds(setMilliseconds(new Date(), 0), 0), 0), 0)
-    if (isRange) {
-      date.value = {
-        start: now,
-        end: now
-      }
-    } else {
-      date.value = now
-    }
-  }
-}, { immediate: true })
-
 const displayedMonth = ref(new Date())
-const calendarDaysOfWeek = ["S", "M", "T", "W", "T", "F", "S"]
-const calendarMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-const calendarYears = [...Array(200).keys()].map((i) => i + 1900)
+const calendarDaysOfWeek = ref(["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"])
+const calendarMonths = ref(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
+const calendarYears = ref([...Array(200).keys()].map((i) => i + 1900))
 const calendarMonthTitle = computed(() => format(displayedMonth.value, 'MMM'))
 const calendarYearTitle = computed(() => format(displayedMonth.value, 'yyyy'))
 const calendarStartOfMonth = computed(() => getDay(startOfMonth(displayedMonth.value)) + 1)
@@ -341,8 +326,6 @@ const setCalendarSelectMonthAndYear = () => {
   calendarMonthSelect.value = format(displayedMonth.value, 'MMMM')
   calendarYearSelect.value = format(displayedMonth.value, 'yyyy')
 }
-
-setCalendarSelectMonthAndYear()
 
 watch(() => view.value, () => {
   setCalendarSelectMonthAndYear()
@@ -364,11 +347,31 @@ const endTimeMinutes = ref<string | null>(null)
 const endTimeMeridian = ref<string | null>(null)
 
 onMounted(() => {
+  initTimeMode()
   moveToStartDate()
   nextTick(() => {
     updateTimeSelects()
   })
 })
+
+const initTimeMode = () => {
+  if (props.mode === 'time') {
+    const isRange = props.modelValue && !isDate(props.modelValue)
+    const now = setHours(setMinutes(setSeconds(setMilliseconds(new Date(), 0), 0), 0), 0)
+    if (isRange) {
+      date.value = {
+        start: now,
+        end: now
+      }
+    } else {
+      date.value = now
+    }
+  }
+}
+
+watch(() => props.modelValue, () => {
+  updateTimeSelects()
+}, { deep: true })
 
 const moveToStartDate = () => {
   if (date.value && !(date.value instanceof Date) && date.value.start instanceof Date) {
@@ -505,7 +508,7 @@ const goToNextMonth = () => {
 }
 const goToSelectedMonth = () => {
   if (!calendarMonthSelect.value || !calendarYearSelect.value) return
-  const monthIndex = calendarMonths.findIndex((i) => i === calendarMonthSelect.value) + 1
+  const monthIndex = calendarMonths.value.findIndex((i) => i === calendarMonthSelect.value) + 1
   console.log(parseInt(calendarYearSelect.value), monthIndex)
   if (typeof monthIndex === 'number') {
     displayedMonth.value = new Date(parseInt(calendarYearSelect.value), monthIndex, 0, 0, 0, 0, 0)
