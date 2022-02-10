@@ -1,2 +1,5 @@
 import 'virtual:windi.css'
-export { default as Calendar } from './Calendar.vue'
+import Calendar from './Calendar.vue'
+export default {
+  Calendar
+}
