@@ -4,11 +4,9 @@ import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 
 // https://vitejs.dev/config/
+/// <reference types="vitest" />
 export default defineConfig({
   plugins: [vue(), WindiCSS()],
-  optimizeDeps: {
-    exclude: ['vue-demi']
-  },
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.ts'),
@@ -31,6 +29,13 @@ export default defineConfig({
           vue: 'Vue'
         }
       }
+    }
+  },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    transformMode: {
+      web: [/\.[jt]sx$/],
     }
   }
 })

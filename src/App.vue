@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Calendar from './components/Calendar.vue'
 // import { Calendar } from '../dist/s-calendar.mjs'
-import { ref } from 'vue-demi'
+import { ref } from 'vue'
 const date = ref<any>({ start: null, end: null })
 // const date = ref(null)
 const min = ref(new Date('07-15-2021'))
@@ -16,7 +16,7 @@ const changeStart = () => {
 
 <template>
   <div class="p-12">
-    <Calendar v-model="date" mode="dateTime" :min="min" :max="max" />
+    <Calendar v-model="date" mode="date" :min="min" :max="max" />
     <button @click="changeStart">Change start</button>
   </div>
 </template>

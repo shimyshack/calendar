@@ -1,9 +1,9 @@
 <template>
-  <div data-testid="calendar" ref="el" class="select-none">
+  <div data-testid="calendar" class="select-none">
     <div v-if="showCalendars">
       <div
-        class="flex gap-1 mb-2"
-        :class="{ 'w-120': isRange && !isMobile, 'w-56': !isRange || isMobile }"
+        class="flex gap-1 mb-2 w-56"
+        :class="{ 'sm:w-120': isRange }"
       >
         <div class="flex-grow flex">
           <button
@@ -12,9 +12,9 @@
             @click="view === 'days' ? view = 'years' : view = 'days'"
           >
             <span>{{ calendarMonthTitle }} {{ calendarYearTitle }}</span>
-            <template v-if="isRange && !isMobile">
-              <span>-</span>
-              <span>{{ calendarNextMonthTitle }} {{ calendarNextYearTitle }}</span>
+            <template v-if="isRange">
+              <span class="hidden sm:inline-block">-</span>
+              <span class="hidden sm:inline-block">{{ calendarNextMonthTitle }} {{ calendarNextYearTitle }}</span>
             </template>
           </button>
         </div>
@@ -31,8 +31,8 @@
       </div>
       <template v-if="view === 'days'">
         <div
-          class="flex"
-          :class="{ 'flex-col': isMobile || !showCalendars, 'gap-8': !isMobile && showCalendars }"
+          class="flex flex-col sm:flex-row"
+          :class="{ 'gap-8': showCalendars }"
         >
           <div class="grid grid-cols-7 w-56 place-content-start">
             <div
@@ -68,8 +68,8 @@
             </div>
           </div>
 
-          <template v-if="isRange && !isMobile">
-            <div class="grid grid-cols-7 w- place-content-start">
+          <template v-if="isRange">
+            <div class="hidden sm:grid grid-cols-7 w- place-content-start">
               <div
                 class="text-sm font-bold text-gray-400 text-center uppercase mb-1"
                 v-for="day of calendarDaysOfWeek"
@@ -106,7 +106,7 @@
         </div>
       </template>
       <template v-else>
-        <div class="grid gap-1" :class="{ 'w-56': isMobile || !isRange, 'w-120': !isMobile && isRange }">
+        <div class="grid gap-1 w-56" :class="{ 'w-120': isRange }">
           <div>
             <div class="text-sm uppercase font-semibold text-gray-500">Month</div>
             <select
@@ -143,7 +143,7 @@
     <!-- Time pickers -->
     <div
       v-if="showTime && view === 'days'"
-      :class="{ 'flex gap-8 w-120': !isMobile && showCalendars && isRange }"
+      :class="{ 'sm:flex sm:gap-8 sm:w-120': showCalendars && isRange }"
     >
       <div :class="{ 'w-56 border-t my-2 pt-2 border-t': showCalendars }">
         <div class="uppercase text-sm text-gray-500 mb-2" :class="{ 'opacity-50': !dateSelectionIsComplete}">
@@ -274,9 +274,8 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { isWithinInterval, isBefore, isAfter, isDate, min, max, isSameMonth, isSameDay, getDaysInMonth, startOfMonth, getDay, getHours, setDate, setHours, setMinutes, setSeconds, setMilliseconds, subMonths, addMonths, format, getMonth, getYear } from 'date-fns'
-import { ref, computed, watch, PropType, onMounted, nextTick } from 'vue-demi'
-import { useResizeObserver, breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { isWithinInterval, isBefore, isAfter, isDate, min, max, isSameDay, getDaysInMonth, startOfMonth, getDay, getHours, setDate, setHours, setMinutes, setSeconds, setMilliseconds, subMonths, addMonths, format } from 'date-fns'
+import { ref, computed, watch, PropType, onMounted, nextTick } from 'vue'
 
 const props = defineProps({
   modelValue: { type: [Object, Date, null] as PropType<CalendarDate | CalendarRange>, default: new Date() },
@@ -286,13 +285,6 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['update:modelValue'])
-
-const el = ref(null)
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const isMobile = ref(false)
-useResizeObserver(el, () => {
-  isMobile.value = breakpoints.isSmaller('sm')
-})
 
 const date = computed<CalendarDate | CalendarRange>({
   get() {
@@ -509,7 +501,6 @@ const goToNextMonth = () => {
 const goToSelectedMonth = () => {
   if (!calendarMonthSelect.value || !calendarYearSelect.value) return
   const monthIndex = calendarMonths.value.findIndex((i) => i === calendarMonthSelect.value) + 1
-  console.log(parseInt(calendarYearSelect.value), monthIndex)
   if (typeof monthIndex === 'number') {
     displayedMonth.value = new Date(parseInt(calendarYearSelect.value), monthIndex, 0, 0, 0, 0, 0)
     displayedNextMonth.value = addMonths(displayedMonth.value, 1)
