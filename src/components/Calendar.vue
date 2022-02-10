@@ -348,14 +348,13 @@ onMounted(() => {
 
 const initTimeMode = () => {
   if (props.mode === 'time') {
-    const isRange = props.modelValue && !isDate(props.modelValue)
     const now = setHours(setMinutes(setSeconds(setMilliseconds(new Date(), 0), 0), 0), 0)
-    if (isRange) {
+    if (isRange.value) {
       date.value = {
-        start: now,
-        end: now
+        start: date.value && !(date.value instanceof Date) && !date.value.start ? now : date.value && date.value && !(date.value instanceof Date) && date.value.start || null,
+        end: date.value && !(date.value instanceof Date) && !date.value.end ? now : date.value && date.value && !(date.value instanceof Date) && date.value.end || null
       }
-    } else {
+    } else if (!date.value) {
       date.value = now
     }
   }

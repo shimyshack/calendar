@@ -16,7 +16,7 @@ const changeStart = () => {
 
 <template>
   <div class="p-12">
-    <Calendar v-model="date" mode="date" :min="min" :max="max" />
+    <Calendar v-model="date" mode="dateTime" :min="min" :max="max" />
     <button @click="changeStart">Change start</button>
   </div>
 </template>
