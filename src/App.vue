@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Calendar from './components/Calendar.vue'
+import Calendar from './components/Calendar/Calendar.vue'
 // import { Calendar } from '../dist/s-calendar.mjs'
 import { ref } from 'vue'
 const date = ref<any>({ start: null, end: null })
