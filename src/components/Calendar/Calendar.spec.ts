@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Calendar from '../components/Calendar/Calendar.vue'
+import Calendar from './Calendar.vue'
 
 describe('Calendar', () => {
   // Single selection
