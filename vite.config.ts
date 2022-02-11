@@ -7,6 +7,7 @@ import WindiCSS from 'vite-plugin-windicss'
 /// <reference types="vitest" />
 export default defineConfig({
   plugins: [vue(), WindiCSS()],
+  publicDir: false,
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.ts'),

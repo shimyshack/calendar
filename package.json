@@ -7,15 +7,16 @@
   ],
   "main": "./dist/s-calendar.umd.js",
   "module": "./dist/s-calendar.mjs",
-  "types": "./dist/types/components/Calendar.vue.d.ts",
+  "types": "./dist/types/components/index.d.ts",
   "type": "module",
   "sideEffects": false,
   "exports": {
     ".": {
       "import": "./dist/s-calendar.mjs",
-      "require": "./dist/s-calendar.umd.js"
+      "require": "./dist/s-calendar.umd.js",
+      "types": "./dist/types/components/index.d.ts"
     },
-    "./dist/*": "./dist/*"
+    "./*": "./*"
   },
   "scripts": {
     "dev": "vite",
