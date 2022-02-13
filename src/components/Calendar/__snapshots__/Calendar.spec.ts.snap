@@ -1,150 +1,146 @@
 // Vitest Snapshot v1
 
 exports[`Calendar > default props 1`] = `
-"<div data-testid=\\"calendar\\" class=\\"select-none\\">
-  <div>
-    <div class=\\"flex gap-1 mb-2 w-56\\">
-      <div class=\\"flex-grow flex\\"><button type=\\"button\\" class=\\"my-auto text-lg font-semibold flex gap-1 text-gray-900 hover:text-gray-500\\"><span>Feb 2022</span>
-          <!--v-if-->
-        </button></div><button type=\\"button\\" class=\\"text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50\\" disabled=\\"false\\"><span class=\\"sr-only\\">Go to previous month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"w-5 h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
-          <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M328 112L184 256l144 144\\" />
-        </svg></button><button type=\\"button\\" class=\\"text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50\\" disabled=\\"false\\"><span class=\\"sr-only\\">Go to next month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"w-5 h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
-          <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M184 112l144 144l-144 144\\" />
-        </svg></button>
+"<div data-testid=\\"calendar\\" class=\\"c-preflight c-select-none\\">
+  <div class=\\"c-flex c-gap-1 c-mb-2 c-w-56\\">
+    <div class=\\"c-flex-grow c-flex\\"><button type=\\"button\\" class=\\"c-my-auto c-text-lg c-font-semibold c-flex c-gap-1 c-text-gray-900 hover:c-text-gray-500\\"><span>Feb 2022</span>
+        <!--v-if-->
+      </button></div><button type=\\"button\\" class=\\"c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50\\" disabled=\\"false\\"><span class=\\"c-sr-only\\">Go to previous month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"c-w-5 c-h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
+        <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M328 112L184 256l144 144\\" />
+      </svg></button><button type=\\"button\\" class=\\"c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50\\" disabled=\\"false\\"><span class=\\"c-sr-only\\">Go to next month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"c-w-5 c-h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
+        <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M184 112l144 144l-144 144\\" />
+      </svg></button>
+  </div>
+  <div class=\\"c-flex c-flex-col sm:c-flex-row c-gap-8\\">
+    <div class=\\"c-grid c-grid-cols-7 c-w-56 c-place-content-start\\">
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">S</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">M</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">W</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">F</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">S</div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1 c-col-start-3\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">1</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">2</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">3</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">4</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">5</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">6</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">7</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">8</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">9</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">10</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">11</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">12</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm c-font-bold c-bg-blue-500 c-text-white\\" disabled=\\"false\\" title=\\"Today\\">13</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">14</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">15</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">16</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">17</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">18</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">19</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">20</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">21</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">22</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">23</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">24</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">25</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">26</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">27</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">28</button></div>
     </div>
-    <div class=\\"flex flex-col sm:flex-row gap-8\\">
-      <div class=\\"grid grid-cols-7 w-56 place-content-start\\">
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">S</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">M</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">W</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">F</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">S</div>
-        <div class=\\"w-8 h-8 mb-1 col-start-3\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">1</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">2</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">3</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">4</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">5</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">6</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">7</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">8</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">9</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm font-bold bg-blue-500 text-white\\" disabled=\\"false\\" title=\\"Today\\">10</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">11</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">12</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">13</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">14</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">15</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">16</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">17</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">18</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">19</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">20</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">21</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">22</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">23</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">24</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">25</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">26</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">27</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">28</button></div>
-      </div>
-      <!--v-if-->
-    </div>
+    <!--v-if-->
   </div><!-- Time pickers -->
   <!--v-if-->
 </div>"
 `;
 
 exports[`Calendar > range date mode 1`] = `
-"<div data-testid=\\"calendar\\" class=\\"select-none\\">
-  <div>
-    <div class=\\"flex gap-1 mb-2 w-56 sm:w-120\\">
-      <div class=\\"flex-grow flex\\"><button type=\\"button\\" class=\\"my-auto text-lg font-semibold flex gap-1 text-gray-900 hover:text-gray-500\\"><span>Feb 2022</span><span class=\\"hidden sm:inline-block\\">-</span><span class=\\"hidden sm:inline-block\\">Mar 2022</span></button></div><button type=\\"button\\" class=\\"text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50\\" disabled=\\"false\\"><span class=\\"sr-only\\">Go to previous month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"w-5 h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
-          <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M328 112L184 256l144 144\\" />
-        </svg></button><button type=\\"button\\" class=\\"text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50\\" disabled=\\"true\\"><span class=\\"sr-only\\">Go to next month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"w-5 h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
-          <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M184 112l144 144l-144 144\\" />
-        </svg></button>
+"<div data-testid=\\"calendar\\" class=\\"c-preflight c-select-none\\">
+  <div class=\\"c-flex c-gap-1 c-mb-2 c-w-56 sm:c-w-120\\">
+    <div class=\\"c-flex-grow c-flex\\"><button type=\\"button\\" class=\\"c-my-auto c-text-lg c-font-semibold c-flex c-gap-1 c-text-gray-900 hover:c-text-gray-500\\"><span>Feb 2022</span><span class=\\"c-hidden sm:c-inline-block\\">-</span><span class=\\"c-hidden sm:c-inline-block\\">Mar 2022</span></button></div><button type=\\"button\\" class=\\"c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50\\" disabled=\\"false\\"><span class=\\"c-sr-only\\">Go to previous month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"c-w-5 c-h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
+        <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M328 112L184 256l144 144\\" />
+      </svg></button><button type=\\"button\\" class=\\"c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50\\" disabled=\\"true\\"><span class=\\"c-sr-only\\">Go to next month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"c-w-5 c-h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
+        <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M184 112l144 144l-144 144\\" />
+      </svg></button>
+  </div>
+  <div class=\\"c-flex c-flex-col sm:c-flex-row c-gap-8\\">
+    <div class=\\"c-grid c-grid-cols-7 c-w-56 c-place-content-start\\">
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">S</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">M</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">W</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">F</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">S</div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1 c-col-start-3\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">1</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">2</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">3</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">4</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">5</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">6</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">7</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">8</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">9</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">10</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">11</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">12</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300 c-font-bold c-text-blue-500 c-bg-gray-100\\" disabled=\\"true\\" title=\\"Today\\">13</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">14</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">15</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">16</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">17</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">18</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">19</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">20</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">21</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">22</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">23</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">24</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">25</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">26</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">27</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">28</button></div>
     </div>
-    <div class=\\"flex flex-col sm:flex-row gap-8\\">
-      <div class=\\"grid grid-cols-7 w-56 place-content-start\\">
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">S</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">M</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">W</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">F</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">S</div>
-        <div class=\\"w-8 h-8 mb-1 col-start-3\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">1</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">2</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">3</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">4</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">5</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">6</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">7</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">8</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">9</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300 font-bold text-blue-500 bg-gray-100\\" disabled=\\"true\\" title=\\"Today\\">10</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">11</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">12</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">13</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">14</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">15</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">16</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">17</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">18</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">19</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">20</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">21</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">22</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">23</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">24</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">25</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">26</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">27</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">28</button></div>
-      </div>
-      <div class=\\"hidden sm:grid grid-cols-7 w- place-content-start\\">
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase mb-1\\">S</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase mb-1\\">M</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase mb-1\\">W</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase mb-1\\">F</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase mb-1\\">S</div>
-        <div class=\\"w-8 h-8 mb-1 col-start-3\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">1</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">2</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">3</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">4</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">5</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">6</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">7</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">8</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">9</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">10</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">11</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">12</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">13</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">14</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">15</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">16</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">17</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">18</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">19</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">20</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">21</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">22</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">23</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">24</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">25</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">26</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">27</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">28</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">29</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">30</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"true\\" title=\\"\\">31</button></div>
-      </div>
+    <div class=\\"c-hidden sm:c-grid c-grid-cols-7 c-place-content-start\\">
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-mb-1\\">S</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-mb-1\\">M</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-mb-1\\">W</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-mb-1\\">F</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-mb-1\\">S</div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1 c-col-start-3\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">1</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">2</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">3</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">4</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">5</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">6</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">7</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">8</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">9</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">10</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">11</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">12</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">13</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">14</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">15</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">16</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">17</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">18</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">19</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">20</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">21</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">22</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">23</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">24</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">25</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">26</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">27</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">28</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">29</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">30</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"true\\" title=\\"\\">31</button></div>
     </div>
   </div><!-- Time pickers -->
   <!--v-if-->
@@ -152,114 +148,110 @@ exports[`Calendar > range date mode 1`] = `
 `;
 
 exports[`Calendar > range default props 1`] = `
-"<div data-testid=\\"calendar\\" class=\\"select-none\\" modevalue=\\"[object Object]\\">
-  <div>
-    <div class=\\"flex gap-1 mb-2 w-56\\">
-      <div class=\\"flex-grow flex\\"><button type=\\"button\\" class=\\"my-auto text-lg font-semibold flex gap-1 text-gray-900 hover:text-gray-500\\"><span>Feb 2022</span>
-          <!--v-if-->
-        </button></div><button type=\\"button\\" class=\\"text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50\\" disabled=\\"false\\"><span class=\\"sr-only\\">Go to previous month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"w-5 h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
-          <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M328 112L184 256l144 144\\" />
-        </svg></button><button type=\\"button\\" class=\\"text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50\\" disabled=\\"false\\"><span class=\\"sr-only\\">Go to next month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"w-5 h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
-          <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M184 112l144 144l-144 144\\" />
-        </svg></button>
+"<div data-testid=\\"calendar\\" class=\\"c-preflight c-select-none\\" modevalue=\\"[object Object]\\">
+  <div class=\\"c-flex c-gap-1 c-mb-2 c-w-56\\">
+    <div class=\\"c-flex-grow c-flex\\"><button type=\\"button\\" class=\\"c-my-auto c-text-lg c-font-semibold c-flex c-gap-1 c-text-gray-900 hover:c-text-gray-500\\"><span>Feb 2022</span>
+        <!--v-if-->
+      </button></div><button type=\\"button\\" class=\\"c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50\\" disabled=\\"false\\"><span class=\\"c-sr-only\\">Go to previous month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"c-w-5 c-h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
+        <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M328 112L184 256l144 144\\" />
+      </svg></button><button type=\\"button\\" class=\\"c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50\\" disabled=\\"false\\"><span class=\\"c-sr-only\\">Go to next month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"c-w-5 c-h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
+        <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M184 112l144 144l-144 144\\" />
+      </svg></button>
+  </div>
+  <div class=\\"c-flex c-flex-col sm:c-flex-row c-gap-8\\">
+    <div class=\\"c-grid c-grid-cols-7 c-w-56 c-place-content-start\\">
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">S</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">M</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">W</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">F</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">S</div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1 c-col-start-3\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">1</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">2</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">3</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">4</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">5</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">6</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">7</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">8</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">9</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">10</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">11</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">12</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm c-font-bold c-bg-blue-500 c-text-white\\" disabled=\\"false\\" title=\\"Today\\">13</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">14</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">15</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">16</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">17</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">18</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">19</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">20</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">21</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">22</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">23</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">24</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">25</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">26</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">27</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">28</button></div>
     </div>
-    <div class=\\"flex flex-col sm:flex-row gap-8\\">
-      <div class=\\"grid grid-cols-7 w-56 place-content-start\\">
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">S</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">M</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">W</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">F</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">S</div>
-        <div class=\\"w-8 h-8 mb-1 col-start-3\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">1</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">2</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">3</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">4</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">5</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">6</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">7</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">8</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">9</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm font-bold bg-blue-500 text-white\\" disabled=\\"false\\" title=\\"Today\\">10</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">11</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">12</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">13</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">14</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">15</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">16</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">17</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">18</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">19</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">20</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">21</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">22</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">23</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">24</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">25</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">26</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">27</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">28</button></div>
-      </div>
-      <!--v-if-->
-    </div>
+    <!--v-if-->
   </div><!-- Time pickers -->
   <!--v-if-->
 </div>"
 `;
 
 exports[`Calendar > single date mode 1`] = `
-"<div data-testid=\\"calendar\\" class=\\"select-none\\">
-  <div>
-    <div class=\\"flex gap-1 mb-2 w-56\\">
-      <div class=\\"flex-grow flex\\"><button type=\\"button\\" class=\\"my-auto text-lg font-semibold flex gap-1 text-gray-900 hover:text-gray-500\\"><span>Feb 2022</span>
-          <!--v-if-->
-        </button></div><button type=\\"button\\" class=\\"text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50\\" disabled=\\"false\\"><span class=\\"sr-only\\">Go to previous month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"w-5 h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
-          <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M328 112L184 256l144 144\\" />
-        </svg></button><button type=\\"button\\" class=\\"text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50\\" disabled=\\"false\\"><span class=\\"sr-only\\">Go to next month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"w-5 h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
-          <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M184 112l144 144l-144 144\\" />
-        </svg></button>
+"<div data-testid=\\"calendar\\" class=\\"c-preflight c-select-none\\">
+  <div class=\\"c-flex c-gap-1 c-mb-2 c-w-56\\">
+    <div class=\\"c-flex-grow c-flex\\"><button type=\\"button\\" class=\\"c-my-auto c-text-lg c-font-semibold c-flex c-gap-1 c-text-gray-900 hover:c-text-gray-500\\"><span>Feb 2022</span>
+        <!--v-if-->
+      </button></div><button type=\\"button\\" class=\\"c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50\\" disabled=\\"false\\"><span class=\\"c-sr-only\\">Go to previous month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"c-w-5 c-h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
+        <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M328 112L184 256l144 144\\" />
+      </svg></button><button type=\\"button\\" class=\\"c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50\\" disabled=\\"false\\"><span class=\\"c-sr-only\\">Go to next month</span><svg xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\" aria-hidden=\\"true\\" role=\\"img\\" class=\\"c-w-5 c-h-5\\" width=\\"32\\" height=\\"32\\" preserveAspectRatio=\\"xMidYMid meet\\" viewBox=\\"0 0 512 512\\">
+        <path fill=\\"none\\" stroke=\\"currentColor\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"48\\" d=\\"M184 112l144 144l-144 144\\" />
+      </svg></button>
+  </div>
+  <div class=\\"c-flex c-flex-col sm:c-flex-row c-gap-8\\">
+    <div class=\\"c-grid c-grid-cols-7 c-w-56 c-place-content-start\\">
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">S</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">M</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">W</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">T</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">F</div>
+      <div class=\\"c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1\\">S</div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1 c-col-start-3\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">1</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">2</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">3</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">4</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">5</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">6</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">7</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">8</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">9</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">10</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">11</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">12</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300 c-font-bold c-text-blue-500 c-bg-gray-100\\" disabled=\\"false\\" title=\\"Today\\">13</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">14</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">15</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">16</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">17</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">18</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">19</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">20</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">21</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">22</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">23</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">24</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">25</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">26</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">27</button></div>
+      <div class=\\"c-w-8 c-h-8 c-mb-1\\"><button type=\\"button\\" class=\\"disabled:c-pointer-events-none disabled:c-opacity-25 c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm hover:c-bg-gray-300\\" disabled=\\"false\\" title=\\"\\">28</button></div>
     </div>
-    <div class=\\"flex flex-col sm:flex-row gap-8\\">
-      <div class=\\"grid grid-cols-7 w-56 place-content-start\\">
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">S</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">M</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">W</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">T</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">F</div>
-        <div class=\\"text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1\\">S</div>
-        <div class=\\"w-8 h-8 mb-1 col-start-3\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">1</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">2</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">3</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">4</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">5</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">6</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">7</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">8</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">9</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300 font-bold text-blue-500 bg-gray-100\\" disabled=\\"false\\" title=\\"Today\\">10</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">11</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">12</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">13</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">14</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">15</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">16</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">17</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">18</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">19</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">20</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">21</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">22</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">23</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">24</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">25</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">26</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">27</button></div>
-        <div class=\\"w-8 h-8 mb-1\\"><button type=\\"button\\" class=\\"disabled:pointer-events-none disabled:opacity-25 px-2 py-1 w-8 h-8 rounded-full text-sm hover:bg-gray-300\\" disabled=\\"false\\" title=\\"\\">28</button></div>
-      </div>
-      <!--v-if-->
-    </div>
+    <!--v-if-->
   </div><!-- Time pickers -->
   <!--v-if-->
 </div>"

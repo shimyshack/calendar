@@ -6,6 +6,8 @@ function range(size, startAt = 1) {
 
 export default defineConfig({
   safelist: [
-    range(7).map(i => `col-start-${i}`), // col-start-1 to col-start-3
-  ]
+    range(7).map(i => `c-col-start-${i}`), // col-start-1 to col-start-3
+  ],
+  preflight: false,
+  prefix: 'c-'
 })

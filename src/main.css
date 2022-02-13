@@ -1,0 +1,193 @@
+:where(.c-preflight) {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --border-color: rgb(209 213 219);
+  --placeholder-color: rgb(156 163 175);
+}
+:where(.c-preflight) *,
+:where(.c-preflight) ::before,
+:where(.c-preflight) ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+:where(.c-preflight)  {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: var(--font-sans);
+}
+:where(.c-preflight)  {
+  margin: 0;
+  line-height: inherit;
+}
+:where(.c-preflight) hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+:where(.c-preflight) abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+:where(.c-preflight) h1,
+:where(.c-preflight) h2,
+:where(.c-preflight) h3,
+:where(.c-preflight) h4,
+:where(.c-preflight) h5,
+:where(.c-preflight) h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.c-preflight) a {
+  color: inherit;
+  text-decoration: inherit;
+}
+:where(.c-preflight) b,
+:where(.c-preflight) strong {
+  font-weight: bolder;
+}
+:where(.c-preflight) code,
+:where(.c-preflight) kbd,
+:where(.c-preflight) samp,
+:where(.c-preflight) pre {
+  font-family: var(--font-mono);
+  font-size: 1em;
+}
+:where(.c-preflight) small {
+  font-size: 80%;
+}
+:where(.c-preflight) sub,
+:where(.c-preflight) sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+:where(.c-preflight) sub {
+  bottom: -0.25em;
+}
+:where(.c-preflight) sup {
+  top: -0.5em;
+}
+:where(.c-preflight) table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+:where(.c-preflight) button,
+:where(.c-preflight) input,
+:where(.c-preflight) optgroup,
+:where(.c-preflight) select,
+:where(.c-preflight) textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+:where(.c-preflight) button,
+:where(.c-preflight) select {
+  text-transform: none;
+}
+:where(.c-preflight) button,
+:where(.c-preflight) [type='button'],
+:where(.c-preflight) [type='reset'],
+:where(.c-preflight) [type='submit'] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+:where(.c-preflight) :-moz-focusring {
+  outline: auto;
+}
+:where(.c-preflight) :-moz-ui-invalid {
+  box-shadow: none;
+}
+:where(.c-preflight) progress {
+  vertical-align: baseline;
+}
+:where(.c-preflight) ::-webkit-inner-spin-button,
+:where(.c-preflight) ::-webkit-outer-spin-button {
+  height: auto;
+}
+:where(.c-preflight) [type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+:where(.c-preflight) ::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+:where(.c-preflight) ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+:where(.c-preflight) summary {
+  display: list-item;
+}
+:where(.c-preflight) blockquote,
+:where(.c-preflight) dl,
+:where(.c-preflight) dd,
+:where(.c-preflight) h1,
+:where(.c-preflight) h2,
+:where(.c-preflight) h3,
+:where(.c-preflight) h4,
+:where(.c-preflight) h5,
+:where(.c-preflight) h6,
+:where(.c-preflight) hr,
+:where(.c-preflight) figure,
+:where(.c-preflight) p,
+:where(.c-preflight) pre {
+  margin: 0;
+}
+:where(.c-preflight) fieldset {
+  margin: 0;
+  padding: 0;
+}
+:where(.c-preflight) legend {
+  padding: 0;
+}
+:where(.c-preflight) ol,
+:where(.c-preflight) ul,
+:where(.c-preflight) menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+:where(.c-preflight) textarea {
+  resize: vertical;
+}
+:where(.c-preflight) input::placeholder,
+:where(.c-preflight) textarea::placeholder {
+  opacity: 1;
+  color: var(--placeholder-color);
+}
+:where(.c-preflight) button,
+:where(.c-preflight) [role="button"] {
+  cursor: pointer;
+}
+:where(.c-preflight) :disabled {
+  cursor: default;
+}
+:where(.c-preflight) img,
+:where(.c-preflight) svg,
+:where(.c-preflight) video,
+:where(.c-preflight) canvas,
+:where(.c-preflight) audio,
+:where(.c-preflight) iframe,
+:where(.c-preflight) embed,
+:where(.c-preflight) object {
+  display: block;
+  vertical-align: middle;
+}
+:where(.c-preflight) img,
+:where(.c-preflight) video {
+  max-width: 100%;
+  height: auto;
+}
+:where(.c-preflight) [hidden] {
+  display: none;
+}

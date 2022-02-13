@@ -1,42 +1,42 @@
 <template>
-  <div data-testid="calendar" class="select-none">
-    <div v-if="showCalendars">
-      <div
-        class="flex gap-1 mb-2 w-56"
-        :class="{ 'sm:w-120': isRange }"
-      >
-        <div class="flex-grow flex">
-          <button
-            type="button"
-            class="my-auto text-lg font-semibold flex gap-1 text-gray-900 hover:text-gray-500"
-            @click="view === 'days' ? view = 'years' : view = 'days'"
-          >
-            <span>{{ calendarMonthTitle }} {{ calendarYearTitle }}</span>
-            <template v-if="isRange">
-              <span class="hidden sm:inline-block">-</span>
-              <span class="hidden sm:inline-block">{{ calendarNextMonthTitle }} {{ calendarNextYearTitle }}</span>
-            </template>
-          </button>
-        </div>
-        <template v-if="view === 'days'">
-          <button type="button" class="text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50" :disabled="!canGoToPrevMonth" @click="goToPrevMonth">
-            <span class="sr-only">Go to previous month</span>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5 h-5" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"></path></svg>
-          </button>
-          <button type="button" class="text-gray-700 px-1 hover:bg-gray-300 rounded disabled:pointer-events-none disabled:opacity-50" :disabled="!canGoToNextMonth" @click="goToNextMonth">
-            <span class="sr-only">Go to next month</span>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5 h-5" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144l-144 144"></path></svg>
-          </button>
-        </template>
-      </div>
-      <template v-if="view === 'days'">
+  <div data-testid="calendar" class="c-preflight c-select-none">
+    <template v-if="showCalendars">
+      <template v-if="showCalendars && view === 'days'">
         <div
-          class="flex flex-col sm:flex-row"
-          :class="{ 'gap-8': showCalendars }"
+          class="c-flex c-gap-1 c-mb-2 c-w-56"
+          :class="{ 'sm:c-w-120': isRange }"
         >
-          <div class="grid grid-cols-7 w-56 place-content-start">
+          <div class="c-flex-grow c-flex">
+            <button
+              type="button"
+              class="c-my-auto c-text-lg c-font-semibold c-flex c-gap-1 c-text-gray-900 hover:c-text-gray-500"
+              @click="view === 'days' ? view = 'years' : view = 'days'"
+            >
+              <span>{{ calendarMonthTitle }} {{ calendarYearTitle }}</span>
+              <template v-if="isRange">
+                <span class="c-hidden sm:c-inline-block">-</span>
+                <span class="c-hidden sm:c-inline-block">{{ calendarNextMonthTitle }} {{ calendarNextYearTitle }}</span>
+              </template>
+            </button>
+          </div>
+          <template v-if="view === 'days'">
+            <button type="button" class="c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50" :disabled="!canGoToPrevMonth" @click="goToPrevMonth">
+              <span class="c-sr-only">Go to previous month</span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="c-w-5 c-h-5" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"></path></svg>
+            </button>
+            <button type="button" class="c-text-gray-700 c-px-1 hover:c-bg-gray-300 c-rounded disabled:c-pointer-events-none disabled:c-opacity-50" :disabled="!canGoToNextMonth" @click="goToNextMonth">
+              <span class="c-sr-only">Go to next month</span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="c-w-5 c-h-5" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144l-144 144"></path></svg>
+            </button>
+          </template>
+        </div>
+        <div
+          class="c-flex c-flex-col sm:c-flex-row"
+          :class="{ 'c-gap-8': showCalendars }"
+        >
+          <div class="c-grid c-grid-cols-7 c-w-56 c-place-content-start">
             <div
-              class="text-sm font-bold text-gray-400 text-center uppercase w-8 mb-1"
+              class="c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-w-8 c-mb-1"
               v-for="day of calendarDaysOfWeek"
               :key="day"
             >{{ day.charAt(0) }}</div>
@@ -44,22 +44,22 @@
               v-for="day of calendarDaysInMonth"
               :key="day"
               :class="[
-                'w-8 h-8 mb-1',
-                day === 1 ? `col-start-${calendarStartOfMonth}` : '',
-                dateIsWithinInterval(day) ? 'bg-blue-200' : '',
-                dateIsAtStartOfInterval(day) ? 'bg-blue-200 rounded-l-full' : '',
-                dateIsAtEndOfInterval(day) ? 'bg-blue-200 rounded-r-full' : '',
+                'c-w-8 c-h-8 c-mb-1',
+                day === 1 ? `c-col-start-${calendarStartOfMonth}` : '',
+                dateIsWithinInterval(day) ? 'c-bg-blue-200' : '',
+                dateIsAtStartOfInterval(day) ? 'c-bg-blue-200 c-rounded-l-full' : '',
+                dateIsAtEndOfInterval(day) ? 'c-bg-blue-200 c-rounded-r-full' : '',
               ]"
             >
               <button
                 type="button"
-                class="disabled:pointer-events-none disabled:opacity-25"
+                class="disabled:c-pointer-events-none disabled:c-opacity-25"
                 :class="{
-                  'px-2 py-1 w-8 h-8 rounded-full text-sm': true,
-                  'hover:bg-gray-300': !dateIsSameDay(day),
-                  'font-bold bg-blue-500 text-white': dateIsSameDay(day),
-                  'font-bold text-blue-500 bg-gray-100': dateIsToday(day) && !dateIsSameDay(day) && !dateIsWithinInterval(day),
-                  'font-semibold text-blue-900': dateIsWithinInterval(day) && !dateIsSameDay(day)
+                  'c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm': true,
+                  'hover:c-bg-gray-300': !dateIsSameDay(day),
+                  'c-font-bold c-bg-blue-500 c-text-white': dateIsSameDay(day),
+                  'c-font-bold c-text-blue-500 c-bg-gray-100': dateIsToday(day) && !dateIsSameDay(day) && !dateIsWithinInterval(day),
+                  'c-font-semibold c-text-blue-900': dateIsWithinInterval(day) && !dateIsSameDay(day)
                 }"
                 :disabled="dateIsBeforeMin(day) || dateIsAfterMax(day)"
                 :title="dateIsToday(day) ? 'Today' : ''"
@@ -69,9 +69,9 @@
           </div>
 
           <template v-if="isRange">
-            <div class="hidden sm:grid grid-cols-7 w- place-content-start">
+            <div class="c-hidden sm:c-grid c-grid-cols-7 c-place-content-start">
               <div
-                class="text-sm font-bold text-gray-400 text-center uppercase mb-1"
+                class="c-text-sm c-font-bold c-text-gray-400 c-text-center c-uppercase c-mb-1"
                 v-for="day of calendarDaysOfWeek"
                 :key="day"
               >{{ day.charAt(0) }}</div>
@@ -79,22 +79,22 @@
                 v-for="day of calendarNextDaysInMonth"
                 :key="day"
                 :class="[
-                  'w-8 h-8 mb-1',
-                  day === 1 ? `col-start-${calendarNextStartOfMonth}` : '',
-                  dateIsWithinInterval(day, true) ? 'bg-blue-200' : '',
-                  dateIsAtStartOfInterval(day, true) ? 'bg-blue-200 rounded-l-full' : '',
-                  dateIsAtEndOfInterval(day, true) ? 'bg-blue-200 rounded-r-full' : '',
+                  'c-w-8 c-h-8 c-mb-1',
+                  day === 1 ? `c-col-start-${calendarNextStartOfMonth}` : '',
+                  dateIsWithinInterval(day, true) ? 'c-bg-blue-200' : '',
+                  dateIsAtStartOfInterval(day, true) ? 'c-bg-blue-200 c-rounded-l-full' : '',
+                  dateIsAtEndOfInterval(day, true) ? 'c-bg-blue-200 c-rounded-r-full' : '',
                 ]"
               >
                 <button
                   type="button"
-                  class="disabled:pointer-events-none disabled:opacity-25"
+                  class="disabled:c-pointer-events-none disabled:c-opacity-25"
                   :class="{
-                    'px-2 py-1 w-8 h-8 rounded-full text-sm': true,
-                    'hover:bg-gray-300': !dateIsSameDay(day, true),
-                    'font-bold bg-blue-500 text-white': dateIsSameDay(day, true),
-                    'font-bold text-blue-500 bg-gray-100': dateIsToday(day, true) && !dateIsSameDay(day, true) && !dateIsWithinInterval(day, true),
-                    'font-semibold text-blue-900': dateIsWithinInterval(day, true) && !dateIsSameDay(day, true)
+                    'c-px-2 c-py-1 c-w-8 c-h-8 c-rounded-full c-text-sm': true,
+                    'hover:c-bg-gray-300': !dateIsSameDay(day, true),
+                    'c-font-bold c-bg-blue-500 c-text-white': dateIsSameDay(day, true),
+                    'c-font-bold c-text-blue-500 c-bg-gray-100': dateIsToday(day, true) && !dateIsSameDay(day, true) && !dateIsWithinInterval(day, true),
+                    'c-font-semibold c-text-blue-900': dateIsWithinInterval(day, true) && !dateIsSameDay(day, true)
                   }"
                   :disabled="dateIsBeforeMin(day, true) || dateIsAfterMax(day, true)"
                   :title="dateIsToday(day, true) ? 'Today' : ''"
@@ -106,47 +106,52 @@
         </div>
       </template>
       <template v-else>
-        <div class="grid gap-1 w-56" :class="{ 'w-120': isRange }">
-          <div>
-            <div class="text-sm uppercase font-semibold text-gray-500">Month</div>
+        <div class="c-grid c-gap-1 c-w-56" :class="{ 'c-w-120': isRange }">
+          <div class="c-space-y-1">
+            <div class="c-text-sm c-uppercase c-font-semibold c-text-gray-500">Month</div>
             <select
               v-model="calendarMonthSelect"
-              class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+              class="c-w-full c-p-1 c-bg-gray-200 hover:c-bg-gray-300 disabled:c-pointer-events-none disabled:c-opacity-50 c-rounded c-cursor-pointer"
             >
               <option v-for="month of calendarMonths">{{ month }}</option>
             </select>
           </div>
-          <div class="mt-1">
-            <div class="text-sm uppercase font-semibold text-gray-500">Year</div>
+          <div class="c-mt-1 c-space-y-1">
+            <div class="c-text-sm c-uppercase c-font-semibold c-text-gray-500">Year</div>
             <select
               v-model="calendarYearSelect"
-              class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+              class="c-w-full c-p-1 c-bg-gray-200 hover:c-bg-gray-300 disabled:c-pointer-events-none disabled:c-opacity-50 c-rounded c-cursor-pointer"
             >
               <option v-for="year of calendarYears">{{ year }}</option>
             </select>
           </div>
           <button
             type="button"
-            class="mt-2 font-semibold border rounded px-2 py-1 hover:shadow text-sm hover:bg-blue-600 rounded text-white bg-blue-500"
+            class="c-mt-2 c-font-semibold c-border c-rounded c-px-2 c-py-1 hover:c-shadow c-text-sm hover:c-bg-blue-600 c-rounded c-text-white c-bg-blue-500"
             @click="goToSelectedMonth()"
           >Go To Date</button>
-          <hr class="my-2" />
           <button
             type="button"
-            class="font-semibold border rounded px-2 py-1 hover:shadow text-sm hover:bg-gray-100 rounded text-blue-500"
+            class="c-mt-2 c-font-semibold c-border c-rounded c-px-2 c-py-1 hover:c-schadow c-text-sm hover:c-bg-gray-100 c-rounded c-text-blue-500"
             @click="goToThisMonth()"
           >Go To Today</button>
+          <hr class="c-my-2" />
+          <button
+            type="button"
+            class="c-font-semibold c-border c-rounded c-px-2 c-py-1 hover:c-schadow c-text-sm hover:c-bg-gray-100 c-rounded c-text-blue-500"
+            @click="view = 'days'"
+          >Cancel</button>
         </div>
       </template>
-    </div>
+    </template>
 
     <!-- Time pickers -->
     <div
       v-if="showTime && view === 'days'"
-      :class="{ 'sm:flex sm:gap-8 sm:w-120': showCalendars && isRange }"
+      :class="{ 'sm:c-flex sm:c-gap-8 sm:c-w-120': showCalendars && isRange }"
     >
-      <div :class="{ 'w-56 border-t my-2 pt-2 border-t': showCalendars }">
-        <div class="uppercase text-sm text-gray-500 mb-2" :class="{ 'opacity-50': !dateSelectionIsComplete}">
+      <div :class="{ 'c-w-56 c-border-t c-my-2 c-pt-2 c-border-t': showCalendars }">
+        <div class="c-uppercase c-text-sm c-text-gray-500 c-mb-2" :class="{ 'c-opacity-50': !dateSelectionIsComplete}">
           <template v-if="date && date instanceof Date">
             {{ formatDate(date, 'eee MMM dd yyyy') }}
           </template>
@@ -157,13 +162,13 @@
             --
           </template>
         </div>
-        <div class="flex gap-1">
+        <div class="c-flex c-gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
             role="img"
-            class="my-auto flex-shrink-0 w-4 h-4 text-gray-700"
+            class="c-my-auto c-flex-shrink-0 c-w-4 c-h-4 c-text-gray-700"
             :class="{ 'opacity-50': !dateSelectionIsComplete}"
             width="32"
             height="32"
@@ -178,16 +183,16 @@
           <select
             v-model="startTimeHour"
             :disabled="!startTimeHour || !dateSelectionIsComplete"
-            class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+            class="c-w-full c-p-1 c-bg-gray-200 hover:c-bg-gray-300 disabled:c-pointer-events-none disabled:c-opacity-50 c-rounded c-cursor-pointer"
             @change="changeTime('hour', ($event.target as HTMLSelectElement).value)"
           >
             <option v-for="hour of getCalendarHours">{{ hour }}</option>
           </select>
-          <span class="my-auto">:</span>
+          <span class="c-my-auto">:</span>
           <select
             v-model="startTimeMinutes"
             :disabled="!startTimeMinutes || !dateSelectionIsComplete"
-            class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+            class="c-w-full c-p-1 c-bg-gray-200 hover:c-bg-gray-300 disabled:c-pointer-events-none disabled:c-opacity-50 c-rounded c-cursor-pointer"
             @change="changeTime('minutes', ($event.target as HTMLSelectElement).value)"
           >
             <option v-for="min of getCalendarMinutes">{{ min }}</option>
@@ -195,15 +200,15 @@
           <select
             v-model="startTimeMeridian"
             :disabled="!startTimeMeridian || !dateSelectionIsComplete"
-            class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+            class="c-w-full c-p-1 c-bg-gray-200 hover:c-bg-gray-300 disabled:c-pointer-events-none disabled:c-opacity-50 c-rounded c-cursor-pointer"
             @change="changeTime('meridian', ($event.target as HTMLSelectElement).value)"
           >
             <option v-for="meridian of getCalendarMeridian">{{ meridian }}</option>
           </select>
         </div>
       </div>
-      <div v-if="isRange" class="border-t my-2 pt-2 border-t" :class="{ 'w-56': showCalendars }">
-        <div class="uppercase text-sm text-gray-500 mb-2" :class="{ 'opacity-50': !dateSelectionIsComplete}">
+      <div v-if="isRange" class="c-border-t c-my-2 c-pt-2 c-border-t" :class="{ 'c-w-56': showCalendars }">
+        <div class="c-uppercase c-text-sm c-text-gray-500 c-mb-2" :class="{ 'c-opacity-50': !dateSelectionIsComplete}">
           <template v-if="date && !(date instanceof Date) && date.end instanceof Date">
             {{ formatDate(date.end, 'eee MMM dd yyyy') }}
           </template>
@@ -211,13 +216,13 @@
             --
           </template>
         </div>
-        <div class="flex gap-1">
+        <div class="c-flex c-gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
             role="img"
-            class="my-auto flex-shrink-0 w-4 h-4 text-gray-700"
+            class="c-my-auto c-flex-shrink-0 c-w-4 c-h-4 c-text-gray-700"
             :class="{ 'opacity-50': !dateSelectionIsComplete}"
             width="32"
             height="32"
@@ -232,7 +237,7 @@
           <select
             v-model="endTimeHour"
             :disabled="!endTimeHour || !dateSelectionIsComplete"
-            class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+            class="c-w-full c-p-1 c-bg-gray-200 hover:c-bg-gray-300 disabled:c-pointer-events-none disabled:c-opacity-50 c-rounded c-cursor-pointer"
             @change="changeTime('hour', ($event.target as HTMLSelectElement).value, true)"
           >
             <option v-for="hour of getCalendarHours">{{ hour }}</option>
@@ -241,7 +246,7 @@
           <select
             v-model="endTimeMinutes"
             :disabled="!endTimeMinutes || !dateSelectionIsComplete"
-            class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+            class="c-w-full c-p-1 c-bg-gray-200 hover:c-bg-gray-300 disabled:c-pointer-events-none disabled:c-opacity-50 c-rounded c-cursor-pointer"
             @change="changeTime('minutes', ($event.target as HTMLSelectElement).value, true)"
           >
             <option v-for="min of getCalendarMinutes">{{ min }}</option>
@@ -249,7 +254,7 @@
           <select
             v-model="endTimeMeridian"
             :disabled="!endTimeMeridian || !dateSelectionIsComplete"
-            class="w-full p-1 bg-gray-200 hover:bg-gray-300 disabled:pointer-events-none disabled:opacity-50 rounded cursor-pointer"
+            class="c-w-full c-p-1 c-bg-gray-200 hover:c-bg-gray-300 disabled:c-pointer-events-none disabled:c-opacity-50 c-rounded c-cursor-pointer"
             @change="changeTime('meridian', ($event.target as HTMLSelectElement).value, true)"
           >
             <option v-for="meridian of getCalendarMeridian">{{ meridian }}</option>
