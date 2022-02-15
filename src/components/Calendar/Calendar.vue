@@ -283,7 +283,7 @@ import { isWithinInterval, isBefore, isAfter, isDate, min, max, isSameDay, getDa
 import { ref, computed, watch, PropType, onMounted, nextTick } from 'vue'
 
 const props = defineProps({
-  modelValue: { type: [Object, Date, null] as PropType<CalendarDate | CalendarRange>, default: new Date() },
+  modelValue: { type: [Object, Date, null] as PropType<CalendarDate | CalendarRange>, default: null },
   mode: { type: String as PropType<CalendarMode>, default: 'date' },
   min: { type: [Date, null] as PropType<CalendarDate>, default: null },
   max: { type: [Date, null] as PropType<CalendarDate>, default: null }
@@ -522,9 +522,6 @@ const canGoToPrevMonth = computed(() => {
 })
 const canGoToNextMonth = computed(() => {
   if (!(props.max instanceof Date)) return true
-  if (isRange.value) {
-    return isAfter(startOfMonth(props.max), startOfMonth(displayedNextMonth.value))
-  }
   return isAfter(startOfMonth(props.max), startOfMonth(displayedMonth.value))
 })
 
@@ -575,12 +572,14 @@ const setModelValueDate = (day: number, isNextMonth = false) => {
 const dateIsBeforeMin = (day: number, isNextMonth = false) => {
   if (!(props.min instanceof Date)) return false
   const month = isNextMonth ? displayedNextMonth.value : displayedMonth.value
-  return isBefore(setDate(month, day), props.min)
+  const startOfMin = setHours(setMinutes(setSeconds(setMilliseconds(props.min, 0), 0), 0), 0)
+  return isBefore(setDate(month, day), startOfMin)
 }
 const dateIsAfterMax = (day: number, isNextMonth = false) => {
   if (!(props.max instanceof Date)) return false
   const month = isNextMonth ? displayedNextMonth.value : displayedMonth.value
-  return isAfter(setDate(month, day), props.max)
+  const startOfMax = setHours(setMinutes(setSeconds(setMilliseconds(props.max, 0), 0), 0), 0)
+  return isAfter(setDate(month, day - 1), startOfMax)
 }
 const dateIsWithinInterval = (day: number, isNextMonth = false) => {
   const month = isNextMonth ? displayedNextMonth.value : displayedMonth.value

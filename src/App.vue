@@ -1,20 +1,16 @@
 <script setup lang="ts">
-import Calendar, { CalendarRange } from './components/Calendar/Calendar.vue'
-// import { Calendar } from '../dist/s-calendar.mjs'
 import { ref } from 'vue'
+import Datepicker from './components/Datepicker/Datepicker.vue'
+import { CalendarRange } from './components/Calendar/Calendar.vue';
+
 const date = ref<CalendarRange>({ start: null, end: null })
 // const date = ref(null)
-const min = ref(new Date('07-15-2021'))
-const max = ref(new Date('12-12-2022'))
-
-const changeStart = () => {
-  date.value.start = new Date()
-}
+const min = ref(new Date('02-03-2022'))
+const max = ref(new Date('03-12-2022'))
 </script>
 
 <template>
-  <div class="c-preflight c-space-4 c-p-12">
-    <Calendar v-model="date" mode="date" :min="min" :max="max" />
-    <button @click="changeStart">Change start</button>
+  <div class="c-preflight c-space-4 c-px-12 c-py-96">
+    <Datepicker v-model="date" mode="dateTime" :min="min" :max="max" />
   </div>
 </template>

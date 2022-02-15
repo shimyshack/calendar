@@ -2,13 +2,17 @@ import '../main.css'
 import 'virtual:windi.css'
 import { App, Component } from 'vue'
 import Calendar from './Calendar'
+import Datepicker from './Datepicker'
+import Popover from './Popover'
 
 interface ComponentList {
   [index: string]: Component
 }
 
 const Components: ComponentList = {
-  Calendar
+  Calendar,
+  Datepicker,
+  Popover
 }
 
 export default {
@@ -20,3 +24,5 @@ export default {
 }
 
 export { default as Calendar } from './Calendar'
+export { default as Datepicker } from './Datepicker'
+export { default as Popover } from './Popover'
