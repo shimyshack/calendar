@@ -20,7 +20,7 @@
       <div
         ref="popover"
         v-if="open"
-        class="c-preflight c-fixed"
+        class="c-preflight c-fixed c-z-50"
         :style="positionStyle"
       >
         <div class="c-bg-white c-border c-shadow-lg c-p-4 c-rounded">
@@ -35,6 +35,13 @@
     </Transition>
   </Teleport>
 </template>
+
+<script lang="ts">
+import { CSSProperties } from 'vue'
+export interface CSSObject extends CSSProperties {
+  [ key: string ]: CSSObject | string | number | undefined;
+}
+</script>
 
 <script lang="ts" setup>
 import { ref, reactive, computed } from 'vue'
@@ -52,17 +59,23 @@ const popoverRect = reactive(useElementBounding(popover))
 const windowSize = reactive(useWindowSize())
 
 const positionStyle = computed(() => {
+  const position: CSSObject = {}
+
+  // vertical position
   if (triggerRect.bottom + props.offsetY + popoverRect.height > windowSize.height) {
-    return {
-      top: `${triggerRect.top - props.offsetY - popoverRect.height}px`,
-      left: `${triggerRect.left}px`
-    }
+    position.top = `${triggerRect.top - props.offsetY - popoverRect.height}px`
   } else {
-    return {
-      top: `${triggerRect.top + triggerRect.height + props.offsetY}px`,
-      left: `${triggerRect.left}px`
-    }
+    position.top = `${triggerRect.top + triggerRect.height + props.offsetY}px`
   }
+
+  // horizontal position
+  if (triggerRect.left + popoverRect.width < windowSize.width) {
+    position.left = `${triggerRect.left}px`
+  } else {
+    position.right = `${windowSize.width - triggerRect.right}px`
+  }
+
+  return position
 })
 
 onClickOutside(popover, (event) => {
