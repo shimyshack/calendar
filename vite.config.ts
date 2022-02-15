@@ -24,6 +24,8 @@ export default defineConfig({
       // into your library
       external: ['vue'],
       output: {
+        // Remove console warning about mixed exports
+        exports: "named",
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
