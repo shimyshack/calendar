@@ -24,7 +24,12 @@
         :style="positionStyle"
       >
         <div class="c-bg-white c-border c-shadow-lg c-p-4 c-rounded">
-          <slot :open="open" />
+          <slot
+            :is-open="open"
+            :open="() => open = true"
+            :close="() => open = false"
+            :toggle="() => open = !open"
+          />
         </div>
       </div>
     </Transition>
@@ -32,7 +37,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, computed, watch, nextTick } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import { onClickOutside, onKeyUp, useElementBounding, useWindowSize } from '@vueuse/core'
 
 const props = defineProps({
