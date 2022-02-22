@@ -4,6 +4,7 @@ import { App, Component } from 'vue'
 import Calendar from './Calendar'
 import Datepicker from './Datepicker'
 import Popover from './Popover'
+import Table from './Table'
 
 interface ComponentList {
   [index: string]: Component
@@ -12,7 +13,8 @@ interface ComponentList {
 const Components: ComponentList = {
   Calendar,
   Datepicker,
-  Popover
+  Popover,
+  Table
 }
 
 export default {
@@ -26,3 +28,4 @@ export default {
 export { default as Calendar } from './Calendar'
 export { default as Datepicker } from './Datepicker'
 export { default as Popover } from './Popover'
+export { default as Table } from './Popover'
