@@ -24,10 +24,16 @@
   import Popover from '../Popover/Popover.vue'
 
   const props = defineProps({
-    modelValue: { type: [Object, Date, null] as PropType<CalendarDate | CalendarRange>, default: null },
-    mode: { type: String as PropType<CalendarMode>, default: 'date' },
-    min: { type: [Date, null] as PropType<CalendarDate>, default: null },
-    max: { type: [Date, null] as PropType<CalendarDate>, default: null }
+    modelValue: { type: [Object, Date] as PropType<CalendarDate | CalendarRange>, default: null },
+    mode: {
+      type: String as PropType<CalendarMode>,
+      validator(value: CalendarMode) {
+        return ['dateTime', 'date', 'time'].includes(value)
+      },
+      default: 'date'
+    },
+    min: { type: Date as PropType<CalendarDate>, default: null },
+    max: { type: Date as PropType<CalendarDate>, default: null }
   })
 
   const emit = defineEmits(['update:modelValue'])

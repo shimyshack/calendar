@@ -271,7 +271,7 @@ export interface CalendarRange {
   start: CalendarDate
   end: CalendarDate
 }
-export type CalendarMode = 'date' | 'dateTime' | 'time'
+export type CalendarMode = 'dateTime' | 'date' | 'time'
 
 export default {
   name: 'Calendar'
@@ -283,10 +283,16 @@ import { isWithinInterval, isBefore, isAfter, isDate, min, max, isSameDay, getDa
 import { ref, computed, watch, PropType, onMounted, nextTick } from 'vue'
 
 const props = defineProps({
-  modelValue: { type: [Object, Date, null] as PropType<CalendarDate | CalendarRange>, default: null },
-  mode: { type: String as PropType<CalendarMode>, default: 'date' },
-  min: { type: [Date, null] as PropType<CalendarDate>, default: null },
-  max: { type: [Date, null] as PropType<CalendarDate>, default: null }
+  modelValue: { type: [Object, Date] as PropType<CalendarDate | CalendarRange>, default: null },
+  mode: {
+    type: String as PropType<CalendarMode>,
+    validator(value: CalendarMode) {
+      return ['dateTime', 'date', 'time'].includes(value)
+    },
+    default: 'date'
+  },
+  min: { type: Date as PropType<CalendarDate>, default: null },
+  max: { type: Date as PropType<CalendarDate>, default: null }
 })
 
 const emit = defineEmits(['update:modelValue'])
