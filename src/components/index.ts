@@ -28,4 +28,4 @@ export default {
 export { default as Calendar } from './Calendar'
 export { default as Datepicker } from './Datepicker'
 export { default as Popover } from './Popover'
-export { default as Table } from './Popover'
+export { default as Table } from './Table'
